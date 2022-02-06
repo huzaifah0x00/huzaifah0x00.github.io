@@ -20,3 +20,12 @@ body {
   display: flex;
   justify-content: center;
 }
+
+h1 {
+  font-size: 4vw;
+}
+
+body,
+button {
+  font-size: 1.5vw;
+}
