@@ -3,15 +3,42 @@ main {
 
   background-color: black;
   color: white;
+
+  display: grid;
+
+  padding: 0.5rem;
 }
 
 .about {
-  padding-top: 30vh;
   display: grid;
   place-items: center;
+  align-content: start;
+  align-self: center;
 }
 
 h1.less-margin {
   margin-top: 4px;
   margin-bottom: 4px;
+}
+
+footer {
+  align-self: end;
+  display: grid;
+  place-items: center;
+}
+
+/* remove a styling */
+a {
+  text-decoration: none;
+
+  transition: all 0.2s ease-in-out;
+}
+
+a:hover {
+  color: grey !important;
+  text-decoration: underline;
+}
+
+a:visited {
+  color: white;
 }
