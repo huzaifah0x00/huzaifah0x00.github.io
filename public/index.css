@@ -1,0 +1,17 @@
+@import url("fonts/fonts.css");
+
+html,
+body,
+#root {
+  margin: 0;
+  height: 100vh;
+  overflow: hidden;
+}
+
+body {
+  font-family: "Nunito", "Arial", "Roboto", sans-serif;
+}
+
+* {
+  box-sizing: border-box;
+}
