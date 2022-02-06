@@ -1,0 +1,12 @@
+main {
+  height: 100vh;
+
+  background-color: black;
+  color: white;
+}
+
+.about {
+  padding-top: 30vh;
+  display: grid;
+  place-items: center;
+}
