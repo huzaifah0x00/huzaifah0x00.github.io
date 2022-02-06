@@ -10,3 +10,8 @@ main {
   display: grid;
   place-items: center;
 }
+
+h1.less-margin {
+  margin-top: 4px;
+  margin-bottom: 4px;
+}
