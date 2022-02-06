@@ -12,6 +12,7 @@ export default function App() {
 
   return (
     <main className="App">
+      <header className="center">WIP: This site is a work in progress, some of the information may not be accurate</header>
       <div className="about animate__animated animate__fadeIn">
         <h1 className="animate__animated animate__fadeInUp less-margin">Hi</h1>
         <h1 className="less-margin">
