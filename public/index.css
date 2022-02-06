@@ -10,9 +10,13 @@ body,
 
 body {
   font-family: "Nunito", "Arial", "Roboto", sans-serif;
-  font-size: 1.25rem;
 }
 
 * {
   box-sizing: border-box;
+}
+
+.center {
+  display: flex;
+  justify-content: center;
 }
