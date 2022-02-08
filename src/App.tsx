@@ -1,17 +1,17 @@
 import "./App.css";
 import "animate.css";
 import { Button, Spacing } from "./components";
-import { SyntheticEvent, useState } from "react";
+import { useState } from "react";
 
 import { AboutModal, ContactModal } from "./Modals";
 
 export default function App() {
   const [aboutModalOpen, setAboutModalOpen] = useState(false);
-  const [portfolioModalOpen, setPortfolioModalOpen] = useState(false);
+  // const [portfolioModalOpen, setPortfolioModalOpen] = useState(false);
   const [contactModalOpen, setContactModalOpen] = useState(false);
 
   const toggleAboutModal = () => setAboutModalOpen(!aboutModalOpen);
-  const togglePortfolioModal = () => setPortfolioModalOpen(!portfolioModalOpen);
+  // const togglePortfolioModal = () => setPortfolioModalOpen(!portfolioModalOpen);
   const toggleContactModal = () => setContactModalOpen(!contactModalOpen);
 
   const [pointerShadowPosition, setPointerShadowPosition] = useState({ left: 0, top: 0 });
@@ -50,11 +50,11 @@ export default function App() {
 
       <footer className="animate__animated animate__fadeInUp animate__delay-3s">
         <div style={{ display: "flex", gap: "0.5em", fontWeight: "bold" }}>
-          <a target="_blank" href="https://Linkedin.com/in/huzaifah-asif">
+          <a target="_blank" rel="noreferrer" href="https://Linkedin.com/in/huzaifah-asif">
             LinkedIn
           </a>
           |
-          <a target="_blank" href="https://github.com/huzaifah0x00">
+          <a target="_blank" rel="noreferrer" href="https://github.com/huzaifah0x00">
             Github
           </a>
         </div>
