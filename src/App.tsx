@@ -1,17 +1,30 @@
 import "./App.css";
 import "animate.css";
 import { Button, Spacing } from "./components";
-import { useState } from "react";
+import { SyntheticEvent, useState } from "react";
 
-import { AboutModalContent } from "./About";
-import Modal from "react-modal";
+import { AboutModal, ContactModal } from "./Modals";
 
 export default function App() {
   const [aboutModalOpen, setAboutModalOpen] = useState(false);
+  const [portfolioModalOpen, setPortfolioModalOpen] = useState(false);
+  const [contactModalOpen, setContactModalOpen] = useState(false);
+
   const toggleAboutModal = () => setAboutModalOpen(!aboutModalOpen);
+  const togglePortfolioModal = () => setPortfolioModalOpen(!portfolioModalOpen);
+  const toggleContactModal = () => setContactModalOpen(!contactModalOpen);
+
+  const [pointerShadowPosition, setPointerShadowPosition] = useState({ left: 0, top: 0 });
+  const handleMouseMove = (e: React.MouseEvent<HTMLDivElement>) => {
+    const { clientX, clientY } = e;
+    const shadow = document.getElementById("pointer-shadow") as HTMLDivElement;
+    const { height, width } = shadow.getBoundingClientRect();
+
+    setPointerShadowPosition({ left: clientX - width / 2, top: clientY - height / 2 });
+  };
 
   return (
-    <main className="App">
+    <main className="App" onMouseMove={handleMouseMove}>
       <header className="center">WIP: This site is a work in progress, some of the information may not be accurate</header>
       <div className="about animate__animated animate__fadeIn">
         <h1 className="animate__animated animate__fadeInUp less-margin">Hi</h1>
@@ -28,11 +41,10 @@ export default function App() {
           <div style={{ display: "flex", gap: "0.5em" }}>
             <Button onClick={toggleAboutModal}>About me</Button>
             <Button>My previous work</Button>
-            <Button>Contact</Button>
+            <Button onClick={toggleContactModal}>Contact</Button>
           </div>
-          <Modal shouldCloseOnEsc shouldCloseOnOverlayClick closeTimeoutMS={500} isOpen={aboutModalOpen} onRequestClose={toggleAboutModal}>
-            <AboutModalContent closeModal={toggleAboutModal}></AboutModalContent>
-          </Modal>
+          <AboutModal isOpen={aboutModalOpen} onRequestClose={toggleAboutModal}></AboutModal>
+          <ContactModal isOpen={contactModalOpen} onRequestClose={toggleContactModal}></ContactModal>
         </div>
       </div>
 
@@ -47,8 +59,9 @@ export default function App() {
           </a>
         </div>
       </footer>
+      <div id="pointer-shadow" style={{ ...pointerShadowPosition }}>
+        <div id="pointer-circle"></div>
+      </div>
     </main>
   );
 }
-
-Modal.setAppElement("#root");
