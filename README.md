@@ -1,5 +1,7 @@
-# Getting Started with Create React App
+# Built with Create React App
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+Nothing to see here...  
+This is just my personal website
 
-EMPTY README
+- [https://huzaifah.dev](https://huzaifah.dev)
+- [huzaifah0x00-github-io.vercel.app](huzaifah0x00-github-io.vercel.app)
