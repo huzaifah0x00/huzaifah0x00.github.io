@@ -29,3 +29,87 @@ button.disabled {
   background-color: var(--button-color-disabled);
   cursor: not-allowed;
 }
+
+.carousel {
+  display: grid;
+  grid-template-columns: auto 1fr auto;
+  place-items: center;
+
+  border: 0.1em solid rgb(45, 45, 45);
+  border-radius: 1em;
+  padding: 0.5em;
+
+  gap: 0.2em;
+}
+
+.carousel-content {
+  display: flex;
+  max-width: 100%;
+  overflow-x: auto;
+  gap: 0.5em;
+
+  scroll-behavior: smooth;
+  scroll-snap-type: x mandatory;
+}
+
+.carousel-content > .carousel-item {
+  place-self: center;
+
+  height: 90%;
+  min-width: 90%;
+  scroll-snap-align: center;
+
+  opacity: 0.5;
+  transition: all 0.5s linear;
+}
+
+.carousel-item.active {
+  opacity: 1;
+}
+
+.carousel-item > * {
+  width: 100%;
+}
+
+div.arrow-container {
+  height: 80%;
+  display: grid;
+  place-items: center;
+
+  border-radius: 0.1em;
+  padding: 0.1em;
+}
+div.arrow-container:hover {
+  background-color: #ffffff50;
+  cursor: pointer;
+}
+
+div.arrow-container.disabled {
+  opacity: 0.2;
+  cursor: not-allowed;
+}
+
+div.left-arrow,
+div.right-arrow {
+  border-top: 0.15em white solid;
+  border-left: 0.15em white solid;
+
+  width: 1em;
+  height: 1em;
+
+  margin: 0.1em;
+}
+
+div.left-arrow {
+  transform: translateX(0.25em) rotate(-45deg);
+}
+
+div.right-arrow {
+  transform: translateX(-0.25em) rotate(135deg);
+}
+
+div.left-arrow:hover,
+div.right-arrow:hover {
+  border-color: #ffffff50;
+  transition: all 0.2s linear;
+}

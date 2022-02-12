@@ -1,0 +1,48 @@
+#pointer-shadow {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 1em;
+  height: 1em;
+  z-index: 1;
+
+  background-color: white;
+
+  border-radius: 50%;
+  pointer-events: none;
+
+  outline: none;
+  border: none;
+
+  transition: all 0.05s linear;
+}
+
+.Home {
+  height: 100vh;
+
+  background-color: black;
+  color: white;
+
+  display: grid;
+  grid-template-rows: auto 1fr auto;
+  padding: 0.5em;
+}
+
+nav {
+  display: flex;
+  gap: 1em;
+}
+
+header {
+  display: flex;
+  align-self: start;
+  justify-content: space-between;
+}
+
+footer {
+  align-self: end;
+  display: flex;
+  place-items: center;
+  justify-content: center;
+  gap: 1em;
+}
