@@ -32,7 +32,7 @@ function Footer() {
 export function Home() {
   return (
     <main className="Home">
-      <header className="center">WIP: This site is a work in progress, some of the information provided here may not be accurate</header>
+      {/* <header className="center">WIP: This site is a work in progress, some of the things may be out of place</header> */}
       <div style={{ overflow: "auto", scrollSnapType: "y proximity" }}>
         <LandingSection />
         <AboutSection />
