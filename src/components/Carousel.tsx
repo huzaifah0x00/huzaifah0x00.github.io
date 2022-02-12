@@ -4,6 +4,8 @@ export function Carousel(props: { children: ReactNode; onChange?: (index: number
   const carouselRef = useRef<HTMLDivElement>(null);
   const [activeIndex, setIndex] = useState(0);
 
+  let prevScrollLeft = 0;
+
   const refreshActiveIndex = () => {
     if (!carouselRef.current) {
       return 0;
@@ -11,6 +13,10 @@ export function Carousel(props: { children: ReactNode; onChange?: (index: number
 
     const totalWidth = carouselRef.current.scrollWidth;
     const currentScrollLeft = carouselRef.current.scrollLeft;
+
+    if (currentScrollLeft === prevScrollLeft) return;
+    else prevScrollLeft = currentScrollLeft;
+
     const totalChildren = React.Children.count(props.children);
 
     const newIndex = Math.round((currentScrollLeft / totalWidth) * totalChildren);
@@ -34,8 +40,8 @@ export function Carousel(props: { children: ReactNode; onChange?: (index: number
     }
   };
 
-  const noMoreLeft = () => activeIndex == 0;
-  const noMoreRight = () => activeIndex + 1 == React.Children.count(props.children);
+  const noMoreLeft = () => activeIndex === 0;
+  const noMoreRight = () => activeIndex + 1 === React.Children.count(props.children);
 
   return (
     <div className="carousel">

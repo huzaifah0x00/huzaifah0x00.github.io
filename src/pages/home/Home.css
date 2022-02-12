@@ -14,7 +14,7 @@
   outline: none;
   border: none;
 
-  transition: all 0.05s linear;
+  transition: all 0.05s smooth;
 }
 
 .Home {

@@ -2,11 +2,13 @@ import { Button, Spacing } from "../../components";
 import "./Sections.css";
 
 import { Carousel } from "../../components/Carousel";
-import contactPlus1 from "../../portfolio content/contactplus/Reports.svg";
-import contactPlus2 from "../../portfolio content/contactplus/Department.svg";
-import contactPlus3 from "../../portfolio content/contactplus/chat.svg";
-import contactPlus4 from "../../portfolio content/contactplus/close ticket chat.svg";
-import { useState } from "react";
+import contactPlus1 from "../../portfolio content/contactplus/Reports.png";
+import contactPlus2 from "../../portfolio content/contactplus/Department.png";
+import contactPlus3 from "../../portfolio content/contactplus/robot.png";
+import contactPlus4 from "../../portfolio content/contactplus/chat.png";
+import contactPlus5 from "../../portfolio content/contactplus/close ticket chat.png";
+
+import DeviceFrame from "../../components/DeviceFrame/DeviceFrame";
 
 const animateToAboutSection = () => {
   const aboutSection = document.getElementById("about-section");
@@ -100,37 +102,68 @@ export function ContactSection() {
 }
 
 export function PortfolioSection() {
-  const [index, setIndex] = useState(0);
-  const getDescription = () => {
-    switch (index) {
-      case 0:
-        return `ContactPlus+ is a customer support software written for a IT Services provider company to enable their team to provide help desk
-        support for their customers using WhatsApp as a medium.`;
-      case 1:
-        return "Real-time chat";
-      case 2:
-        return "This is a project I worked on for a client. It is a chatbot that helps users to close tickets and chat with the team.";
-      case 3:
-        return "This is a project I worked on for a client. It is a chatbot that helps users to close tickets and chat with the team.";
-      default:
-        return "";
-    }
-  };
-
   return (
     <section id="portfolio-section">
       <h1 className="less-margin">Projects</h1>
-      <div style={{ display: "grid", gridTemplateColumns: "auto 1fr 1fr", gap: "1em", placeItems: "center" }}>
+      <div style={{ display: "grid", gridTemplateColumns: "1fr 2fr 2fr", gap: "1em", placeItems: "center" }}>
         <h2 className="project-title">ContactPlus+</h2>
-        <div className="project-description">{getDescription()}</div>
-        <Carousel onChange={setIndex}>
+        <div className="project-description">
+          <p>
+            ContactPlus+ is a customer support software written for an IT Services provider company to enable their team to provide help
+            desk support for their customers using WhatsApp as a medium.
+          </p>
+          <div>
+            <span>Features:</span>
+            <ul>
+              <li>Real-time Chat using Websockets</li>
+              <li>Cusomizable Chat bot for redirecting customers to their required department</li>
+              <li>Ticketing System for Customer support staff and record-keeping</li>
+              <li>Automated Queue management system, for assigning customers to support agents</li>
+              <li>Portuguese Localization</li>
+            </ul>
+          </div>
+        </div>
+        <Carousel>
           <img src={contactPlus1} alt="ContactPlus+1" />
           <img src={contactPlus2} alt="ContactPlus+2" />
           <img src={contactPlus3} alt="ContactPlus+3" />
           <img src={contactPlus4} alt="ContactPlus+4" />
+          <img src={contactPlus5} alt="ContactPlus+5" />
         </Carousel>
       </div>
+
+      <Spacing></Spacing>
+      <div className="divider"></div>
+
+      <div style={{ display: "grid", gridTemplateColumns: "1fr 2fr 2fr", gap: "1em", placeItems: "center" }}>
+        <h2 className="project-title">VGPro</h2>
+        <div className="project-description">
+          <p>
+            VG PRO is a company based in France that specializes in periodic general verification of Heavy Machinery and Equipment. The
+            company aims to minimize the risk of accidents by regularly checking their clients’ work equipment including heavy machinery.
+          </p>
+          <div>
+            <span>Features:</span>
+            <ul>
+              <li>Real-time Chat using Websockets</li>
+              <li>Cusomizable Chat bot for redirecting customers to their required department</li>
+              <li>Ticketing System for Customer support staff and record-keeping</li>
+              <li>Automated Queue management system, for assigning customers to support agents</li>
+            </ul>
+          </div>
+        </div>
+        <Carousel>
+          <img src={contactPlus1} alt="ContactPlus+1" />
+          <img src={contactPlus2} alt="ContactPlus+2" />
+          <img src={contactPlus3} alt="ContactPlus+3" />
+          <img src={contactPlus4} alt="ContactPlus+4" />
+          <img src={contactPlus5} alt="ContactPlus+5" />
+        </Carousel>
+      </div>
+
       <div>VGPRO</div>
+      <DeviceFrame contentImageSrc={contactPlus1}></DeviceFrame>
+
       <div>Turnstile Management System</div>
       <div>Giraffe :'(</div>
     </section>
