@@ -1,37 +1,25 @@
-#landing-section {
-  height: 100%;
-  display: grid;
-  place-items: center;
-  align-content: start;
-
-  margin-top: 10vh;
-}
-
-#about-section {
-  height: 100%;
-  /* display: grid; */
-  /* grid-template-rows: auto minmax(0, 1fr) 1fr; */
-  display: grid;
-  place-items: center;
-  gap: 1em;
-  padding: 1em;
-  color: white;
-}
-
-#contact-section {
-  height: 100%;
-  display: grid;
-
-  gap: 0.5em;
-  padding: 1em;
-  color: white;
-}
-
-#portfolio-section {
+article {
   min-height: 100%;
-  display: grid;
-  grid-template-rows: auto minmax(0, 1fr) auto;
-  gap: 0.5em;
   padding: 1em;
-  color: white;
+}
+
+article header {
+  width: 100%;
+  position: sticky;
+  top: 0;
+  background: black;
+}
+
+div.carousel {
+  position: sticky;
+  top: 1em;
+}
+
+.project-header {
+  width: 100%;
+  position: sticky;
+  top: 0;
+  background: black;
+
+  align-self: center;
 }

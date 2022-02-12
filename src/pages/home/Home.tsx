@@ -27,7 +27,7 @@ function Footer() {
 export default function Home() {
   return (
     <main className="Home">
-      {/* <header className="center">WIP: This site is a work in progress, some of the information provided here may not be accurate</header> */}
+      <header className="center">WIP: This site is a work in progress, some of the information provided here may not be accurate</header>
       <div style={{ overflow: "auto", scrollSnapType: "y proximity" }}>
         <LandingSection></LandingSection>
         <AboutSection />
