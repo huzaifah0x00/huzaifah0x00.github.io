@@ -3,11 +3,13 @@ article {
   padding: 1em;
 }
 
-article header {
+article > header {
   width: 100%;
   position: sticky;
   top: 0;
   background: black;
+
+  text-decoration: underline;
 }
 
 div.carousel {

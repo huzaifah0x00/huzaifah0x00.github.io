@@ -1,7 +1,7 @@
 import { useState } from "react";
-import Home from "./home/Home";
+import { Home } from "./home/home";
 
-export default function App() {
+export function App() {
   const [pointerShadowPosition, setPointerShadowPosition] = useState({ left: 0, top: 0 });
   const handleMouseMove = (e: React.MouseEvent<HTMLDivElement>) => {
     const { clientX, clientY } = e;

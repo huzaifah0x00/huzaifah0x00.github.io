@@ -1,4 +1,5 @@
 import React, { ReactNode, useRef, useState } from "react";
+import "./carousel.css";
 
 export function Carousel(props: { children: ReactNode; onChange?: (index: number) => void }) {
   const carouselRef = useRef<HTMLDivElement>(null);

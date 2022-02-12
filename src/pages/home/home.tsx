@@ -1,6 +1,11 @@
 import "animate.css";
-import { AboutSection, ContactSection, LandingSection, PortfolioSection } from "./Sections";
-import "./Home.css";
+
+import { LandingSection } from "./sections/landing";
+import { AboutSection } from "./sections/about";
+import { ContactSection } from "./sections/contact";
+import { PortfolioSection } from "./sections/portfolio";
+
+import "./home.css";
 
 function Footer() {
   return (
@@ -24,12 +29,12 @@ function Footer() {
   );
 }
 
-export default function Home() {
+export function Home() {
   return (
     <main className="Home">
       <header className="center">WIP: This site is a work in progress, some of the information provided here may not be accurate</header>
       <div style={{ overflow: "auto", scrollSnapType: "y proximity" }}>
-        <LandingSection></LandingSection>
+        <LandingSection />
         <AboutSection />
         <PortfolioSection />
         <ContactSection />
