@@ -1,4 +1,4 @@
-import { Spacing } from "../../components";
+import { Spacing } from "..";
 
 export function ContactSection() {
   return (

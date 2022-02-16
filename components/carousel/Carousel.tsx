@@ -1,7 +1,7 @@
 import React, { ReactNode, useRef, useState } from "react";
 import styles from "./Carousel.module.css";
 
-export function Carousel(props: { children: ReactNode; onChange?: (index: number) => void }) {
+export default function Carousel(props: { children: ReactNode; onChange?: (index: number) => void }) {
   const carouselRef = useRef<HTMLDivElement>(null);
   const [activeIndex, setIndex] = useState(0);
 

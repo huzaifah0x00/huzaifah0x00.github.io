@@ -1,4 +1,4 @@
-import { Button, Spacing } from "../../components";
+import { Button, Spacing } from "..";
 import { animateToContactSection, animateToPortfolioSection } from "./sections";
 
 export function LandingSection() {

@@ -1,6 +1,6 @@
 import React, { useEffect, useRef, useState } from "react";
 
-import { Carousel } from "../../components";
+import { Carousel } from "..";
 
 import contactPlus4 from "../../public/portfolio-content/contactplus/chat.png";
 import contactPlus5 from "../../public/portfolio-content/contactplus/close ticket chat.png";

@@ -1,9 +1,9 @@
 import type { NextPage } from "next";
 import Head from "next/head";
 
-import { ContactSection } from "./sections/contact";
-import { LandingSection } from "./sections/landing";
-import { PortfolioSection } from "./sections/portfolio";
+import { ContactSection } from "../components/sections/contact";
+import { LandingSection } from "../components/sections/landing";
+import { PortfolioSection } from "../components/sections/portfolio";
 
 const Home: NextPage = () => {
   return (
