@@ -1,16 +1,18 @@
 import React, { useEffect, useRef, useState } from "react";
-import { Carousel } from "../../../components";
-import contactPlus4 from "../../../portfolio-content/contactplus/chat.png";
-import contactPlus5 from "../../../portfolio-content/contactplus/close ticket chat.png";
-import contactPlus2 from "../../../portfolio-content/contactplus/Department.png";
-import contactPlus1 from "../../../portfolio-content/contactplus/Reports.png";
-import contactPlus3 from "../../../portfolio-content/contactplus/robot.png";
-import vgpro1 from "../../../portfolio-content/vgpro/vgpro1.png";
-import vgpro2 from "../../../portfolio-content/vgpro/vgpro2.jpg";
-import vgpro3 from "../../../portfolio-content/vgpro/vgpro3.jpg";
-import vgpro4 from "../../../portfolio-content/vgpro/vgpro4.jpg";
-import "./portfolio.css";
-import "./sections.css";
+
+import { Carousel } from "../../components";
+
+import contactPlus4 from "../../public/portfolio-content/contactplus/chat.png";
+import contactPlus5 from "../../public/portfolio-content/contactplus/close ticket chat.png";
+import contactPlus2 from "../../public/portfolio-content/contactplus/Department.png";
+import contactPlus1 from "../../public/portfolio-content/contactplus/Reports.png";
+import contactPlus3 from "../../public/portfolio-content/contactplus/robot.png";
+import vgpro1 from "../../public/portfolio-content/vgpro/vgpro1.png";
+import vgpro2 from "../../public/portfolio-content/vgpro/vgpro2.jpg";
+import vgpro3 from "../../public/portfolio-content/vgpro/vgpro3.jpg";
+import vgpro4 from "../../public/portfolio-content/vgpro/vgpro4.jpg";
+
+import Image from "next/image";
 
 export function PortfolioSection() {
   const [activeProject, setActiveProject] = useState("");
@@ -86,11 +88,11 @@ function ContactPlus(props: { onVisibile: (visible: boolean) => void }) {
         </div>
       </div>
       <Carousel>
-        <img src={contactPlus1} alt="ContactPlus-portfolio" />
-        <img src={contactPlus2} alt="ContactPlus-portfolio" />
-        <img src={contactPlus3} alt="ContactPlus-portfolio" />
-        <img src={contactPlus4} alt="ContactPlus-portfolio" />
-        <img src={contactPlus5} alt="ContactPlus-portfolio" />
+        <Image src={contactPlus1} alt="ContactPlus-portfolio" />
+        <Image src={contactPlus2} alt="ContactPlus-portfolio" />
+        <Image src={contactPlus3} alt="ContactPlus-portfolio" />
+        <Image src={contactPlus4} alt="ContactPlus-portfolio" />
+        <Image src={contactPlus5} alt="ContactPlus-portfolio" />
       </Carousel>
     </section>
   );
@@ -121,7 +123,7 @@ function VGPRO(props: { onVisible: (visible: boolean) => void }) {
       <div className="project-description">
         <p>
           <b>VGPro</b> is a company based in France that specializes in periodic general verification of Heavy Machinery and Equipment. The
-          company aims to minimize the risk of accidents by regularly checking their clients' work equipment including heavy machinery.
+          company aims to minimize the risk of accidents by regularly checking their clients&apos; work equipment including heavy machinery.
         </p>
         <p>This app allows their technicians to submit a full report using forms and pictures of the equipment.</p>
         <div>
@@ -138,37 +140,17 @@ function VGPRO(props: { onVisible: (visible: boolean) => void }) {
         </div>
       </div>
       <Carousel>
-        <div
-          style={{
-            borderRadius: "0.5rem",
-            overflow: "hidden",
-          }}
-        >
-          <img height="400px" src={vgpro1} alt="vgpro-portfolio" />
+        <div style={{ borderRadius: "0.5rem", overflow: "hidden" }}>
+          <Image width={310} height={400} src={vgpro1} alt="vgpro-portfolio" />
         </div>
-        <div
-          style={{
-            borderRadius: "0.5rem",
-            overflow: "hidden",
-          }}
-        >
-          <img height="400px" src={vgpro2} alt="vgpro-portfolio" />
+        <div style={{ borderRadius: "0.5rem", overflow: "hidden" }}>
+          <Image width={200} height={400} src={vgpro2} alt="vgpro-portfolio" />
         </div>
-        <div
-          style={{
-            borderRadius: "0.5rem",
-            overflow: "hidden",
-          }}
-        >
-          <img height="400px" src={vgpro3} alt="vgpro-portfolio" />
+        <div style={{ borderRadius: "0.5rem", overflow: "hidden" }}>
+          <Image width={200} height={400} src={vgpro3} alt="vgpro-portfolio" />
         </div>
-        <div
-          style={{
-            borderRadius: "0.5rem",
-            overflow: "hidden",
-          }}
-        >
-          <img height="400px" src={vgpro4} alt="vgpro-portfolio" />
+        <div style={{ borderRadius: "0.5rem", overflow: "hidden" }}>
+          <Image width={200} height={400} src={vgpro4} alt="vgpro-portfolio" />
         </div>
       </Carousel>
     </section>

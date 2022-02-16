@@ -1,0 +1,138 @@
+html,
+body {
+  margin: 0;
+  height: 100vh;
+  overflow: hidden;
+  font-size: 1.2rem;
+}
+
+body {
+  font-family: "Nunito", "Arial", "Roboto", sans-serif;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+:root {
+  --button-color: black;
+  --button-color-hover: rgba(255, 255, 255, 0.2);
+  --button-color-active: rgba(45, 45, 45, 0.5);
+  --button-color-disabled: rgb(150, 150, 150);
+}
+
+button {
+  padding: 0.5rem;
+
+  font-size: 1rem;
+  background-color: var(--button-color);
+  color: white;
+  border: 1px lightgrey solid;
+  border-radius: 0.3rem;
+  transition: all 0.2s linear;
+}
+
+button:hover {
+  background-color: var(--button-color-hover);
+  cursor: pointer;
+}
+
+button:active {
+  background-color: var(--button-color-active);
+  transform: translateY(0.1rem);
+}
+
+button.disabled {
+  background-color: var(--button-color-disabled);
+  cursor: not-allowed;
+}
+
+.center {
+  display: flex;
+  justify-content: center;
+}
+
+.no-wrap {
+  word-wrap: nowrap;
+}
+
+::selection {
+  background: #90909080; /* WebKit/Blink Browsers */
+}
+::-moz-selection {
+  background: #90909080; /* WebKit/Blink Browsers */
+}
+
+a:visited,
+a {
+  color: grey;
+  text-decoration: none;
+
+  transition: color 0.2s linear;
+}
+
+a:hover {
+  color: white !important;
+}
+
+a:active {
+  background-color: rgb(10, 10, 10);
+}
+
+span {
+  display: inline-block;
+}
+
+.less-margin {
+  margin-top: 4px;
+  margin-bottom: 4px;
+}
+
+div.divider {
+  width: 100%;
+  height: 0.1rem;
+  background-color: #90909080;
+}
+
+nav {
+  display: flex;
+  gap: 1rem;
+}
+
+header {
+  display: flex;
+  align-self: start;
+  justify-content: space-between;
+}
+
+footer {
+  align-self: end;
+  display: flex;
+  place-items: center;
+  justify-content: center;
+  gap: 1rem;
+
+  margin-top: 0.1rem;
+  border-top: 1px solid #90909080;
+}
+
+@media screen and (max-width: 700px) {
+  .Home {
+    display: none;
+  }
+
+  .not-responsive-message {
+    display: grid !important;
+  }
+}
+
+.Home {
+  height: 100vh;
+
+  background-color: black;
+  color: white;
+
+  display: grid;
+  grid-template-rows: auto 1fr auto;
+  padding: 0.5rem;
+}

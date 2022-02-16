@@ -1,5 +1,5 @@
 import React, { ReactNode, useRef, useState } from "react";
-import "./carousel.css";
+import styles from "./Carousel.module.css";
 
 export function Carousel(props: { children: ReactNode; onChange?: (index: number) => void }) {
   const carouselRef = useRef<HTMLDivElement>(null);
@@ -45,21 +45,21 @@ export function Carousel(props: { children: ReactNode; onChange?: (index: number
   const noMoreRight = () => activeIndex + 1 === React.Children.count(props.children);
 
   return (
-    <div className="carousel">
-      <div onClick={scrollCarouselLeft} className={"arrow-container" + (noMoreLeft() ? " disabled" : "")}>
-        <div className="left-arrow"></div>
+    <div className={styles.carousel}>
+      <div onClick={scrollCarouselLeft} className={styles["arrow-container"] + (noMoreLeft() ? ` ${styles.disabled}` : "")}>
+        <div className={styles["left-arrow"]}></div>
       </div>
-      <div ref={carouselRef} onScroll={(_) => refreshActiveIndex()} className="carousel-content">
+      <div ref={carouselRef} onScroll={(_) => refreshActiveIndex()} className={styles["carousel-content"]}>
         {React.Children.map(props.children, (child, index) => {
           return (
-            <div className={`carousel-item ${activeIndex === index ? "active" : ""}`} key={index}>
+            <div className={`${styles["carousel-item"]} ${activeIndex === index ? styles.active : ""}`} key={index}>
               {child}
             </div>
           );
         })}
       </div>
-      <div onClick={scrollCarouselRight} className={"arrow-container" + (noMoreRight() ? " disabled" : "")}>
-        <div className="right-arrow"></div>
+      <div onClick={scrollCarouselRight} className={styles["arrow-container"] + (noMoreRight() ? ` ${styles.disabled}` : "")}>
+        <div className={styles["right-arrow"]}></div>
       </div>
     </div>
   );

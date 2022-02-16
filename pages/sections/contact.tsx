@@ -1,5 +1,4 @@
-import { Spacing } from "../../../components";
-import "./sections.css";
+import { Spacing } from "../../components";
 
 export function ContactSection() {
   return (
