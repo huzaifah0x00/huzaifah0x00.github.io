@@ -3,9 +3,9 @@ import "./sections.css";
 
 export function ContactSection() {
   return (
-    <article id="contact-section" style={{ display: "grid", gridTemplateColumns: "auto 1fr" }}>
-      <header className="project-header">
-        <h2>Let's get in touch</h2>
+    <article id="contact-section" style={{ display: "grid", gridTemplateRows: "auto 1fr" }}>
+      <header>
+        <h2>Contact</h2>
       </header>
       <div className="article-content" style={{ display: "grid", placeItems: "center", placeSelf: "center" }}>
         <div>

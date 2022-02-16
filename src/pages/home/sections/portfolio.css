@@ -1,0 +1,12 @@
+.project-section {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 1rem;
+  place-items: center;
+
+  font-size: 0.8rem;
+}
+
+a.active {
+  color: white !important;
+}

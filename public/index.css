@@ -1,11 +1,11 @@
 @import url("fonts/fonts.css");
 
 html,
-body,
-#root {
+body {
   margin: 0;
   height: 100vh;
   overflow: hidden;
+  font-size: 1.2rem;
 }
 
 body {
@@ -16,16 +16,15 @@ body {
   box-sizing: border-box;
 }
 
+button {
+  font-size: 1rem;
+}
+
 .center {
   display: flex;
   justify-content: center;
 }
 
-h1 {
-  font-size: 4vw;
-}
-
-body,
-button {
-  font-size: 1.5vw;
+.no-wrap {
+  word-wrap: nowrap;
 }

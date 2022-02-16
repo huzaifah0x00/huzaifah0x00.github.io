@@ -1,45 +1,26 @@
 import "animate.css";
 
 import { LandingSection } from "./sections/landing";
-import { AboutSection } from "./sections/about";
 import { ContactSection } from "./sections/contact";
 import { PortfolioSection } from "./sections/portfolio";
 
 import "./home.css";
-
-function Footer() {
-  return (
-    <footer className="animate__animated animate__fadeInUp animate__delay-3s">
-      <div
-        style={{
-          display: "flex",
-          gap: "0.5em",
-          fontWeight: "bold",
-        }}
-      >
-        <a target="_blank" rel="noreferrer" href="https://Linkedin.com/in/huzaifah-asif">
-          LinkedIn
-        </a>
-        |
-        <a target="_blank" rel="noreferrer" href="https://github.com/huzaifah0x00">
-          Github
-        </a>
-      </div>
-    </footer>
-  );
-}
+import { Footer } from "../../components/Footer";
 
 export function Home() {
   return (
-    <main className="Home">
-      <header className="center">WIP: Sorry but... This site is currently a work in progress, some of the things may be out of place</header>
-      <div style={{ overflow: "auto", scrollSnapType: "y proximity" }}>
-        <LandingSection />
-        <AboutSection />
-        <PortfolioSection />
-        <ContactSection />
+    <>
+      <main className="Home">
+        <div style={{ overflow: "auto", scrollSnapType: "y proximity" }}>
+          <LandingSection />
+          <PortfolioSection />
+          <ContactSection />
+        </div>
+        <Footer></Footer>
+      </main>
+      <div style={{ display: "none", height: "100vh", placeItems: "center" }} className="not-responsive-message">
+        <h1 style={{ textAlign: "center" }}>This website is not viewable on small screens.</h1>
       </div>
-      <Footer></Footer>
-    </main>
+    </>
   );
 }

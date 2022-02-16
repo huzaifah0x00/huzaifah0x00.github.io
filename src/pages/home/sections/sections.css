@@ -1,6 +1,6 @@
 article {
   min-height: 100%;
-  padding: 1em;
+  padding: 1rem;
 }
 
 article > header {
@@ -8,17 +8,10 @@ article > header {
   position: sticky;
   top: 0;
   background: black;
-
-  text-decoration: underline;
-}
-
-div.carousel {
-  position: sticky;
-  top: 1em;
 }
 
 .project-header {
-  width: 100%;
+  width: fit-content;
   position: sticky;
   top: 0;
   background: black;
