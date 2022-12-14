@@ -126,6 +126,34 @@ footer {
   }
 }
 
+::-webkit-scrollbar {
+  width: 10px;
+  height: 10px;
+  background-color: rgba(255, 255, 255, 0.1);
+}
+
+::-webkit-scrollbar:hover {
+  width: 10px;
+  height: 10px;
+  background-color: rgba(255, 255, 255, 0.15);
+}
+
+
+::-webkit-scrollbar-thumb {
+  background-color: rgba(255, 255, 255, 0.5);
+  border-radius: 10px;
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background-color: rgba(255, 255, 255, 0.7);
+  border-radius: 10px;
+}
+
+::-webkit-scrollbar-thumb:active {
+  background-color: rgba(255, 255, 255);
+  border-radius: 10px;
+}
+
 .Home {
   height: 100vh;
 
@@ -134,5 +162,11 @@ footer {
 
   display: grid;
   grid-template-rows: auto 1fr auto;
-  padding: 0.5rem;
+}
+
+
+.todo {
+  font-size: small;
+  display: flex;
+  justify-content: center;
 }

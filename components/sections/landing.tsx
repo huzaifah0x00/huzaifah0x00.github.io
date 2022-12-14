@@ -6,6 +6,7 @@ export function LandingSection() {
     <article id="landing-section" style={{ textAlign: "center" }}>
       <h1>Hi,</h1>
       <h2 className="less-margin">I&lsquo;m Huzaifah</h2>
+      <div className="todo">TODO: make these roll around in a circle</div>
       <div style={{ display: "flex", justifyContent: "center", gap: "1rem" }}>
         <h3 style={{ margin: "0" }} className="no-wrap">
           I am a

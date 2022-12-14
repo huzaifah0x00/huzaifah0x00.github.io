@@ -16,12 +16,13 @@ const Home: NextPage = () => {
 
       <main className="Home">
         <div style={{ overflow: "auto", scrollSnapType: "y proximity" }}>
+          <div className="todo">TODO: Update website content with latest work... it's old</div>
           <LandingSection />
           <PortfolioSection />
           <ContactSection />
         </div>
 
-        <footer>
+        <footer style={{ padding: "0.2rem" }}>
           <div style={{ display: "flex", gap: "0.5rem", fontWeight: "bold" }}>
             <a target="_blank" rel="noreferrer" href="https://Linkedin.com/in/huzaifah-asif">
               LinkedIn
