@@ -46,7 +46,7 @@ export default function Carousel(props: { children: ReactNode; onChange?: (index
 
   return (
     <div className={styles.carousel}>
-      <div onClick={scrollCarouselLeft} className={styles["arrow-container"] + (noMoreLeft() ? ` ${styles.disabled}` : "")}>
+      <div role="button" onClick={scrollCarouselLeft} className={styles["arrow-container"] + (noMoreLeft() ? ` ${styles.disabled}` : "")}>
         <div className={styles["left-arrow"]}></div>
       </div>
       <div ref={carouselRef} onScroll={(_) => refreshActiveIndex()} className={styles["carousel-content"]}>
@@ -58,7 +58,7 @@ export default function Carousel(props: { children: ReactNode; onChange?: (index
           );
         })}
       </div>
-      <div onClick={scrollCarouselRight} className={styles["arrow-container"] + (noMoreRight() ? ` ${styles.disabled}` : "")}>
+      <div role="button" onClick={scrollCarouselRight} className={styles["arrow-container"] + (noMoreRight() ? ` ${styles.disabled}` : "")}>
         <div className={styles["right-arrow"]}></div>
       </div>
     </div>

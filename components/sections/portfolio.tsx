@@ -89,11 +89,11 @@ function ContactPlus(props: { onVisibile: (visible: boolean) => void }) {
         </div>
       </div>
       <Carousel>
-        <Image placeholder="blur" src={contactPlus1} alt="ContactPlus-portfolio" />
-        <Image placeholder="blur" src={contactPlus2} alt="ContactPlus-portfolio" />
-        <Image placeholder="blur" src={contactPlus3} alt="ContactPlus-portfolio" />
-        <Image placeholder="blur" src={contactPlus4} alt="ContactPlus-portfolio" />
-        <Image placeholder="blur" src={contactPlus5} alt="ContactPlus-portfolio" />
+        <Image style={{ height: "auto" }} placeholder="blur" src={contactPlus1} alt="ContactPlus-portfolio" />
+        <Image style={{ height: "auto" }} placeholder="blur" src={contactPlus2} alt="ContactPlus-portfolio" />
+        <Image style={{ height: "auto" }} placeholder="blur" src={contactPlus3} alt="ContactPlus-portfolio" />
+        <Image style={{ height: "auto" }} placeholder="blur" src={contactPlus4} alt="ContactPlus-portfolio" />
+        <Image style={{ height: "auto" }} placeholder="blur" src={contactPlus5} alt="ContactPlus-portfolio" />
       </Carousel>
     </section>
   );
@@ -142,16 +142,16 @@ function VGPRO(props: { onVisible: (visible: boolean) => void }) {
       </div>
       <Carousel>
         <div style={{ borderRadius: "0.5rem", overflow: "hidden" }}>
-          <Image placeholder="blur" width={310} height={400} src={vgpro1} alt="vgpro-portfolio" />
+          <Image placeholder="blur" height={400} src={vgpro1} alt="vgpro-portfolio" />
         </div>
         <div style={{ borderRadius: "0.5rem", overflow: "hidden" }}>
-          <Image placeholder="blur" width={200} height={400} src={vgpro2} alt="vgpro-portfolio" />
+          <Image placeholder="blur" height={400} src={vgpro2} alt="vgpro-portfolio" />
         </div>
         <div style={{ borderRadius: "0.5rem", overflow: "hidden" }}>
-          <Image placeholder="blur" width={200} height={400} src={vgpro3} alt="vgpro-portfolio" />
+          <Image placeholder="blur" height={400} src={vgpro3} alt="vgpro-portfolio" />
         </div>
         <div style={{ borderRadius: "0.5rem", overflow: "hidden" }}>
-          <Image placeholder="blur" width={200} height={400} src={vgpro4} alt="vgpro-portfolio" />
+          <Image placeholder="blur" height={400} src={vgpro4} alt="vgpro-portfolio" />
         </div>
       </Carousel>
     </section>
