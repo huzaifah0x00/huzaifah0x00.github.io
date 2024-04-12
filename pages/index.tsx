@@ -3,7 +3,7 @@ import Head from "next/head";
 
 import { ContactSection } from "../components/sections/contact";
 import { LandingSection } from "../components/sections/landing";
-import { PortfolioSection } from "../components/sections/portfolio";
+import { PortfolioSection } from "../components/sections/portfolio/portfolio";
 
 const Home: NextPage = () => {
   return (
